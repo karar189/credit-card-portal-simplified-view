@@ -1,8 +1,28 @@
 .card {
-  height: 400px;
-  width: 300px;
+  /* height: 100vh; */
+  width: 90vw;
 }
 .card img {
-  height: 400px;
-  width: 300px;
+  height: 90vh;
+  width: 100%;
+}
+#mobileViewImg {
+  display: none;
+}
+#desktopViewImg {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100vw;
+  }
+  .card img {
+    height: 50vh;
+  }
+  #mobileViewImg {
+    display: block;
+  }
+  #desktopViewImg {
+    display: none;
+  }
 }
