@@ -16,6 +16,12 @@
     height: 100%;
   }
 }
+@media screen and (max-width: 400px) {
+  .cvv {
+    position: absolute;
+    top: 30%;
+  }
+}
 @media screen and (min-width: 1600px) {
   .front-img img {
     width: 420px;
@@ -25,4 +31,58 @@
     width: 420px;
     height: 250px;
   }
+}
+.front-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.card-logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.card-logo img {
+  width: 68px;
+  height: 36px;
+}
+.card-number {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 90%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto", sans-serif;
+}
+.card-holder {
+  width: 80%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 70%;
+  left: 5%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto", sans-serif;
+}
+.back-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.cvv {
+  position: absolute;
+  top: 37%;
+  left: 79%;
+  width: 90%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto", sans-serif;
 }

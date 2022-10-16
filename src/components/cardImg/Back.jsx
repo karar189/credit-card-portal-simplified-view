@@ -5,6 +5,9 @@ const Back = () => {
   return (
     <div className="back-img">
       <img src={back} alt="back" />
+      <div className="cvv">
+        <p>000</p>
+      </div>
     </div>
   );
 };
