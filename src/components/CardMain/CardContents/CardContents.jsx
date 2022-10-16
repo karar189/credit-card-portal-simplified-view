@@ -81,9 +81,9 @@ const CardContents = () => {
 
   return (
     <>
-      <Grid>
+      <Grid className="cardContents">
         <Container>
-          <Grid>
+          <Grid p={2}>
             <form onSubmit={handleSubmit}>
               <div className="form-box">
                 <CssTextField
