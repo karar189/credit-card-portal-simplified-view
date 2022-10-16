@@ -26,3 +26,67 @@
     display: none;
   }
 }
+
+.card-section {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  display: flex;
+  flex-direction: column;
+}
+.card-section .frontCard {
+  position: relative;
+  left: -10%;
+  padding: 10px;
+}
+.card-section .backCard {
+  position: relative;
+  left: 5%;
+  top: 80%;
+  padding: 10px;
+  margin-top: 18px;
+}
+@media screen and (min-width: 1600px) {
+  .card-section {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-section .frontCard {
+    position: relative;
+    left: -10%;
+    padding: 10px;
+  }
+  .card-section .backCard {
+    position: relative;
+    left: 5%;
+    top: 80%;
+    padding: 10px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-section {
+    position: absolute;
+    top: 5%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card-section .frontCard {
+    position: relative;
+    /* left: -10%; */
+    /* padding: 10px; */
+  }
+  .card-section .backCard {
+    position: relative;
+    /* left: 5%; */
+    top: 80%;
+    padding: 10px;
+    margin-top: 18px;
+  }
+}
