@@ -21,7 +21,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const CardContents = () => {
+const CardContents = (props) => {
   const initialValues = {
     cardName: "",
     cardNumber: "",
@@ -43,6 +43,8 @@ const CardContents = () => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
+      alert("Form Submitted");
+      props.setPage((currPage) => currPage + 1);
     }
   }, [formErrors]);
   const validate = (values) => {
@@ -77,6 +79,9 @@ const CardContents = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    // onClick={() => {
+    //   props.setPage((currPage) => currPage + 1);
+    // }}
   };
 
   return (
@@ -120,26 +125,32 @@ const CardContents = () => {
                       <div className="form-box2">
                         <label htmlFor="date-field">Expiry Date</label>
                         <div className="box2-field">
-                          <CssTextField
-                            variant="outlined"
-                            placeholder="MM"
-                            type="number"
-                            name="expiryDate"
-                            id="date-field"
-                            value={formValues.expiryDate}
-                            onChange={handleChange}
-                          />
-                          <p>{formErrors.expiryDate}</p>
-                          <CssTextField
-                            variant="outlined"
-                            placeholder="YY"
-                            type="number"
-                            name="expiryDateYear"
-                            id="date-field"
-                            value={formValues.expiryDateYear}
-                            onChange={handleChange}
-                          />
-                          <p>{formErrors.expiryDateYear}</p>
+                          <div className="month">
+                            {" "}
+                            <CssTextField
+                              variant="outlined"
+                              placeholder="MM"
+                              type="number"
+                              name="expiryDate"
+                              id="date-field"
+                              value={formValues.expiryDate}
+                              onChange={handleChange}
+                            />
+                            <p>{formErrors.expiryDate}</p>
+                          </div>
+                          <div className="year">
+                            {" "}
+                            <CssTextField
+                              variant="outlined"
+                              placeholder="YY"
+                              type="number"
+                              name="expiryDateYear"
+                              id="date-field"
+                              value={formValues.expiryDateYear}
+                              onChange={handleChange}
+                            />
+                            <p>{formErrors.expiryDateYear}</p>
+                          </div>
                         </div>
                       </div>
                     </Grid>

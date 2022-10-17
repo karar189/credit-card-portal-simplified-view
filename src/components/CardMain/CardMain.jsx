@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import left from "../../images/bg-main-desktop.png";
 import mobileleft from "../../images/bg-main-mobile.png";
@@ -8,8 +8,21 @@ import { Container, Box, Grid } from "@mui/material";
 import CardContents from "./CardContents/CardContents";
 import Front from "../cardImg/Front";
 import Back from "../cardImg/Back";
+import ThanksPage from "./ThanksPage/ThanksPage";
 
 const CardMain = () => {
+  const [page, setPage] = useState(0);
+  const pageDisplay = () => {
+    switch (page) {
+      case 0:
+        return <CardContents setPage={setPage} />;
+      case 1:
+        return <ThanksPage setPage={setPage} />;
+      default:
+        return <CardContents setPage={setPage} />;
+    }
+  };
+
   return (
     <>
       <Grid container className="card">
@@ -27,8 +40,8 @@ const CardMain = () => {
           </div>
         </div>
         <Grid item xs={12} md={8}>
-          <CardContents />
-          {/* <Test /> */}
+          {pageDisplay()}
+          {/* <CardContents setPage={setPage} /> */}
         </Grid>
       </Grid>
     </>

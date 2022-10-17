@@ -35,6 +35,15 @@
 .form-box2 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.form-box2 .month {
+  width: 50%;
+  margin-right: 5px;
+}
+.form-box2 .year {
+  width: 50%;
+  margin-left: 5px;
 }
 .form-box2 label {
   margin-bottom: 0.4rem;
