@@ -39,7 +39,7 @@ const CardMain = () => {
             <Back />
           </div>
         </div>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} className="white-container">
           {pageDisplay()}
           {/* <CardContents setPage={setPage} /> */}
         </Grid>
